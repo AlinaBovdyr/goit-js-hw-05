@@ -14,16 +14,17 @@ class Storage {
   }
 
   removeItem(item) {
-    const newItemList = [];
-    for (const product of this.items) {
-      if (product !== item) {
-        newItemList.push(product);
-      }
-    }
+    // const newItemList = [];
+    // for (const product of this.items) {
+    //   if (product !== item) {
+    //     newItemList.push(product);
+    //   }
+    // }
 
-    this.items = newItemList;
+    // this.items = newItemList;
+    // return this.items;
 
-    return this.items;
+    this.items = this.items.filter(product => product !== item);
   }
 }
 
